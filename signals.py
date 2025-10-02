@@ -5,6 +5,11 @@ def generate_sine_wave(frequency, duration, sample_rate):
     y= np.sin(2*np.pi*frequency*t)
     return t, y
 
+def generate_sinc_wave(duration1, sample_rate1):
+    t2 = np.linspace((-1)*duration1, duration1,int(sample_rate1*duration1))
+    y2 = np.sinc(t2)
+    return t2, y2
+
 def unit_step(n):
     return np.heaviside(n,1)
 

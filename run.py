@@ -14,6 +14,18 @@ plt.grid(True)
 
 plt.show()
 
+#sinc wave
+t2,y2=s.generate_sinc_wave(4,250)
+
+plt.figure()
+plt.plot(t2, y2)
+plt.title("Generated sinc wave")
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
+plt.grid(True)
+
+plt.show()
+
 #unit step
 n=np.linspace(-5,5,1000)
 
@@ -49,4 +61,5 @@ plt.ylabel("$\Pi(t)$")
 plt.grid(True)
 
 plt.show()
+
 

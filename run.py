@@ -15,10 +15,10 @@ plt.grid(True)
 plt.show()
 
 #sinc wave
-t2,y2=s.generate_sinc_wave(4,250)
+t,y=s.generate_sinc_wave(4,250)
 
 plt.figure()
-plt.plot(t2, y2)
+plt.plot(t, y)
 plt.title("Generated sinc wave")
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
@@ -27,10 +27,10 @@ plt.grid(True)
 plt.show()
 
 #unit step
-n=np.linspace(-5,5,1000)
+t=np.linspace(-2,2,1000)
 
 plt.figure()
-plt.plot(n, s.unit_step(n))
+plt.plot(t, s.unit_step(t))
 plt.title("Generated unit step 1")
 plt.xlabel("Time (s)")
 plt.ylabel("u(t)")
@@ -39,10 +39,10 @@ plt.grid(True)
 plt.show()
 
 #unit step2
-n2=np.linspace(-2,2,1000)
+t=np.linspace(-2,2,1000)
 
 plt.figure()
-plt.plot(n2, s.unit_step2(n2))
+plt.plot(t, s.unit_step2(t))
 plt.title("Generated unit step 2")
 plt.xlabel("Time (s)")
 plt.ylabel("u(t)")
@@ -51,10 +51,10 @@ plt.grid(True)
 plt.show()
 
 #unit pulse
-x=np.linspace(-2,2,1000)
+t=np.linspace(-2,2,1000)
 
 plt.figure()
-plt.plot(x, s.unit_pulse(x))
+plt.plot(t, s.unit_pulse(t))
 plt.title("Generated unit pulse")
 plt.xlabel("Time (s)")
 plt.ylabel("$\Pi(t)$")
@@ -62,4 +62,26 @@ plt.grid(True)
 
 plt.show()
 
+#unit step shifted + scaled
+t=np.linspace(2,6,1000)
 
+plt.figure()
+plt.plot(t, s.unit_step((t-4)*(-3)))
+plt.title("$-3 \cdot u(t-4)$")
+plt.xlabel("Time (s)")
+plt.ylabel("u(t)")
+plt.grid(True)
+
+plt.show()
+
+#unit step + unit pulse
+t=np.linspace(-2,6,1000)
+
+plt.figure()
+plt.plot(t, s.unit_step((t-4)*(-3)) + s.unit_pulse(t-1))
+plt.title("$-3 \cdot u(t-4)$ + $\Pi(t-1)$")
+plt.xlabel("Time (s)")
+plt.ylabel("x(t)")
+plt.grid(True)
+
+plt.show()

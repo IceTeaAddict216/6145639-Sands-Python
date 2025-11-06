@@ -58,14 +58,11 @@ def test_sinc_wave_symmetry():
 def test_unit_pulse():
     t = np.array([-3, -2, -1, 0, 1, 2, 3])
     y = s.unit_pulse(t)
-    print("t:", t)
-    print("y:", y)
     assert y[0] == 0     
     assert y[3] == 2     
     assert y[-1] == 0
 
 def test_unit_pulse_scalar():
-    print("Scalar test:", s.unit_pulse(0))
     assert s.unit_pulse(0) == 2
     assert s.unit_pulse(3) == 0
     assert s.unit_pulse(-3) == 0

@@ -31,10 +31,15 @@ Python functions are provided to create standard signals such as sine waves, sin
 
 ## How to use
 1. Run the program:
+
     ```python run.py```
+
     This will open plots for each generated signal and modifies them
+    
 2. Run the tests (optional):
+
     ```python -m pytest```
+
     This checks if the functions work properly. If they do, the terminal will show the following:
     ![Passed test](Images/passed_test.png)
     

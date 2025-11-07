@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Signals and Systems"
+version = "0.1.0"
+description = "Generates various signals which are then modified and plotted"
+authors = [{name = "Eline Bisschop", email = "ebisschop@tudelft.nl"}]
+readme = "README.md"
+dependencies = ["numpy", "matplotlib", "pytest"]
+
+[project.urls]
+repository = "https://github.com/IceTeaAddict216/6145639-sands-python"

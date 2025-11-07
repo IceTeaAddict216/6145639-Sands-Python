@@ -36,7 +36,7 @@ Python functions are provided to create standard signals such as sine waves, sin
 2. Run the tests (optional):
     ```python -m pytest```
     This checks if the functions work properly. If they do, the terminal will show the following:
-    ![Passed test](passed_test.png)
+    ![Passed test](Images/passed_test.png)
     
 ## Example
 ```python
@@ -54,4 +54,4 @@ plt.ylabel("Amplitude")
 plt.grid(True)
 plt.show()
 ```
- ![Example plot](Example_plot.png)
+ ![Example plot](Images/Example_plot.png)

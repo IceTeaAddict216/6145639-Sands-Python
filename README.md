@@ -8,7 +8,7 @@ This repository contains scripts to generate and visualise basic signals and to 
 - [Installation](#installation)
 - [How to use](#how-to-use)
     - [Example](#example)
--[Acknowledgements](#acknowledgements)
+- [Acknowledgements](#acknowledgements)
 
 ## Description
 Python functions are provided to create standard signals such as sine waves, sinc, unit step and unit pulse functions. These are then plotted and modified (time scaling/shifting, addition and multiplication).

@@ -72,6 +72,7 @@ plt.show()
 ```
 
 Output:
+
  ![Example plot](Images/Example_plot.png)
 
 ## Acknowledgements

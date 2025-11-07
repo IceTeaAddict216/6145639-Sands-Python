@@ -3,6 +3,7 @@ import signals as s
 import pytest
 
 def test_generate_sine_wave():
+    """Test generate_sine_wave for normal, zero-frequency, and zero-duration inputs."""
     t, y = s.generate_sine_wave(5, 2, 100)
     assert y[0] == 0
 
@@ -12,7 +13,10 @@ def test_generate_sine_wave():
     t, y = s.generate_sine_wave(0, 1, 10)
     assert np.allclose(y, 0)
 
+
 def test_generate_sinc_wave():
+    """Test generate_sinc_wave for zero-length and symmetry of output for single-period."""
+    t, y = s.generate_sinc_wave(0, 10)
     t, y = s.generate_sinc_wave(0, 10)
     assert len(t) == 0
     assert len(y) == 0
@@ -22,6 +26,7 @@ def test_generate_sinc_wave():
     
 
 def test_unit_step():
+    """Test unit_step for scalars, arrays, and empty input arrays."""
     assert s.unit_step(-1) == 0
     assert s.unit_step(0) == 1
     assert s.unit_step(5) == 1
@@ -37,6 +42,7 @@ def test_unit_step():
 
 
 def test_unit_step2():
+    """Test unit_step2 for scalars, arrays, and empty input arrays with custom step value."""
     assert s.unit_step2(-1) == 0
     assert s.unit_step2(0) == 2
     assert s.unit_step2(5) == 2
@@ -52,6 +58,7 @@ def test_unit_step2():
 
 
 def test_unit_pulse():
+    """Test unit_pulse for array inputs, scalar inputs, and edge behavior."""
     t = np.array([-3, -2, -1, 0, 1, 2, 3])
     y = s.unit_pulse(t)
     assert y[0] == 0     

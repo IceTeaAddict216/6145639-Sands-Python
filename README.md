@@ -3,13 +3,26 @@ This repository contains scripts to generate and visualise basic signals and to 
 
 ## Table of Contents
 - [Description](#description)
+- [Feutures](#features)
 - [Structure](#structure)
 - [Installation](#installation)
 - [How to use](#how-to-use)
-- [Example](#example)
+    - [Example](#example)
+-[Acknowledgements](#acknowledgements)
 
 ## Description
 Python functions are provided to create standard signals such as sine waves, sinc, unit step and unit pulse functions. These are then plotted and modified (time scaling/shifting, addition and multiplication).
+
+## Features
+- Generate standard signals:
+  - Sine waves  
+  - Sinc functions  
+  - Unit step and unit pulse signals  
+- Modify the signals:
+  - Time shifting and scaling  
+  - Addition and multiplication  
+- Visualize all signals with Matplotlib  
+- Includes tests to verify the functions
 
 ## Structure
 | File | Description |
@@ -31,19 +44,17 @@ Python functions are provided to create standard signals such as sine waves, sin
 
 ## How to use
 1. Run the program:
-
     ```python run.py```
 
     This will open plots for each generated signal and modifies them
     
 2. Run the tests (optional):
-
     ```python -m pytest```
 
     This checks if the functions work properly. If they do, the terminal will show the following:
     ![Passed test](Images/passed_test.png)
     
-## Example
+### Example
 ```python
 import signals as s
 import matplotlib.pyplot as plt
@@ -59,4 +70,10 @@ plt.ylabel("Amplitude")
 plt.grid(True)
 plt.show()
 ```
+
+Output:
  ![Example plot](Images/Example_plot.png)
+
+## Acknowledgements
+Developed for the Signals and Systems (AESB2122-24) course at TU Delft.
+Special thanks to Geet George and the TA's for guidance and feedback.
